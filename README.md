@@ -3,10 +3,12 @@ The model can be implentated by following simple steps
 # Installation
 This model is build as python package and can used in the python environment
 ## Reqiurements
+Install the required packages in the python environment
 * RDkit
 * pandas
 * numpy
 * pickle
+* bz2file
 # Implementation
 Clone the repository and set it as working directory <br/>
 ```
