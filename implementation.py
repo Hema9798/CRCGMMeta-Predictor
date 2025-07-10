@@ -12,11 +12,13 @@ import pickle
 from rdkit import DataStructs
 from rdkit import Chem
 from rdkit.Chem import AllChem
-with open('final_uniprot_fp.pckl', 'rb') as file:
-    df_indexed1=pickle.load(file)
+import bz2file as bz2
 
-with open('clf3_val_final.pkl', 'rb') as file:
-    clf=pickle.load(file)
+with bz2.open('final_fp.pbz2', 'rb') as f:
+    df_indexed1 = pickle.load(f)
+    
+with bz2.open('clf_model.pbz2', 'rb') as f:
+    clf = pickle.load(f)
     
 with open('protein_names.pckl', 'rb') as file:
     name=pickle.load(file)
