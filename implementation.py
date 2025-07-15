@@ -34,7 +34,7 @@ for i in range(3001,4410):
     l.append(i) 
 df_indexed1.columns = l
 
-def CRCGMetaPredict(sm):
+def CRCGMMetaPredict(sm):
     h=Chem.MolFromSmiles(sm)
     fpgen=AllChem.GetRDKitFPGenerator()
     h1=fpgen.GetFingerprint(h)
