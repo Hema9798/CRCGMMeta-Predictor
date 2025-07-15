@@ -12,8 +12,8 @@ Install the required packages in the python environment
 # Implementation
 Clone the repository and set it as working directory <br/>
 ```
-from implementation import CRCGMetaPredict
-res = CRCGMetaPredict('input puchem SMILES of the query compound')
+from implementation import CRCGMMetaPredict
+res = CRCGMMetaPredict('input puchem SMILES of the query compound')
 ```
 The result will be saved in the res variable  
 
