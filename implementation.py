@@ -22,18 +22,14 @@ with bz2.open('clf_model.pbz2', 'rb') as f:
     
 with open('protein_names.pckl', 'rb') as file:
     name=pickle.load(file)
-    
+name.reset_index(drop=True, inplace=True)
 EC=pd.read_excel('all_EC_reteived.xlsx')
-
 EC_name=pd.read_excel('EC data.xlsx')
-
 EC_abundance=pd.read_excel('Ec_tax_genus_abun.xlsx')
-
 l=[] 
 for i in range(3001,4410):
     l.append(i) 
 df_indexed1.columns = l
-
 def CRCGMMetaPredict(sm):
     h=Chem.MolFromSmiles(sm)
     fpgen=AllChem.GetRDKitFPGenerator()
